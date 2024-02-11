@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Montserrat", "Helvetica", "sans-serif"],
-        "source-serif": ['"Source Serif 4"', "serif"],
+        "source-serif": ['"Source Serif Pro"', "Times", "serif"],
       },
       colors: {
         orange: {
@@ -25,7 +25,7 @@ module.exports = {
         grey: {
           0: "#F8F9FA",
           100: "#E9ECEF",
-          200: "#DEE2E6",
+          200: "#EFF6FF",
           300: "#CED4DA",
           400: "#ADB5BD",
           500: "#6C757D",

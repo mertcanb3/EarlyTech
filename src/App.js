@@ -6,6 +6,10 @@ import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import AddchartIcon from "@mui/icons-material/Addchart";
 import TextField from "@mui/material/TextField";
+import Teams from "./components/teams";
+import Footer from "./components/footer";
+import FormSubmit from "./components/formsubmit";
+import FAQs from "./components/faq";
 
 function App() {
   const CustomTextField = styled(TextField)({
@@ -14,12 +18,14 @@ function App() {
       color: "#081631", // Text color
       backgroundColor: "#F3F4F6", // Background color
       borderRadius: "40px 0 0 40px", // Left border radius
-      padding:"7px 330px",
+      fontSize: "18px",
+      padding: "7px 330px",
       "& fieldset": {
         // Targets the border
         borderColor: "black", // Border color
       },
       "&:hover fieldset": {
+        backgroundColor: " #F3F4F6",
         borderColor: "black", // Border color on hover
       },
       "&.Mui-focused fieldset": {
@@ -91,7 +97,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bg-blue-400 h-[700px] ">
+      <div className="bg-blue-400 h-[750px] ">
         <div className="flex justify-center  [&>*]:bg-white-200 [&>*]:h-[330px] [&>*]:w-[30%]  [&>*]:mx-5 [&>*]:mt-[-60px] [&>*]:rounded-lg [&>*]:flex [&>*]:flex-col">
           <div className="pt-4 pl-8">
             <ContentPasteSearchIcon
@@ -99,7 +105,9 @@ function App() {
               fontSize="large"
               sx={{ color: "#1A74FF", fontSize: "50px" }}
             />{" "}
-            <h5 className=" text-3xl font-bold font-">Planning and Roadmap</h5>
+            <h5 className=" text-[28px] font-bold font-">
+              Planning and Roadmap
+            </h5>
             <a
               className="mt-2 text-xl underline underline-offset-4 text-blue-600 font-bold mb-3"
               href="google.com"
@@ -123,7 +131,7 @@ function App() {
               fontSize="large"
               sx={{ color: "#1A74FF", fontSize: "50px" }}
             />{" "}
-            <h5 className=" text-3xl font-bold font-">
+            <h5 className=" text-[28px] font-bold font-">
               Technology Integration
             </h5>
             <a
@@ -149,7 +157,7 @@ function App() {
               fontSize="large"
               sx={{ color: "#1A74FF", fontSize: "50px" }}
             />{" "}
-            <h5 className=" text-3xl font-bold ">KPI and Optimization</h5>
+            <h5 className=" text-[28px] font-bold ">KPI and Optimization</h5>
             <a
               className="mt-2 text-xl underline underline-offset-4 text-blue-600 font-bold mb-3"
               href="google.com"
@@ -169,20 +177,19 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col mx-auto  w-8/12 mt-24">
-          <h5 className="mb-5 text-[50px] font-source-serif font-[900] text-white-300 ">
-            Join our newsletter to get notified about our latest offers and
-            news!
+          <h5 className="mb-5 text-[3.75rem] font-source-serif font-[900] text-white-300 ">
+            Get notified about our latest offers and news!
           </h5>
           <div className="flex ">
-            <CustomTextField
-              id="filled-basic"
-              
-              variant="filled"
-            />
+            <CustomTextField id="filled-basic" variant="filled" />
             <CustomButtonTwo variant="contained">Join</CustomButtonTwo>
           </div>
         </div>
       </div>
+      <Teams />
+      <FormSubmit />
+      <FAQs/>
+      <Footer />
     </div>
   );
 }
