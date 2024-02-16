@@ -10,38 +10,54 @@ import Teams from "./components/teams";
 import Footer from "./components/footer";
 import FormSubmit from "./components/formsubmit";
 import FAQs from "./components/faq";
+import banner from "./assets/banner-removebg-preview.png";
 
 function App() {
-  const CustomTextField = styled(TextField)({
+  const CustomTextField = styled((props) => (
+    <TextField
+      InputProps={{
+        disableUnderline: true, // disable the underline
+        ...props.InputProps, // spread any other passed InputProps
+      }}
+      {...props} // spread the rest of the props to TextField
+    />
+  ))({
     "& .MuiInputBase-root": {
-      // Targets the input element
-      color: "#081631", // Text color
-      backgroundColor: "#F3F4F6", // Background color
-      borderRadius: "40px 0 0 40px", // Left border radius
-      fontSize: "18px",
-      padding: "7px 330px",
+      color: "#081631",
+      backgroundColor: "#F3F4F6",
+      borderRadius: "40px 0 0 40px",
+      fontSize: "28px",
+      padding: "0px 220px",
       "& fieldset": {
-        // Targets the border
-        borderColor: "black", // Border color
+        border: "0px", // ensure border is removed
+        backgroundColor: "#F3F4F6",
       },
       "&:hover fieldset": {
-        backgroundColor: " #F3F4F6",
-        borderColor: "black", // Border color on hover
+        backgroundColor: "#F3F4F6",
+        // Ensure the borderColor on hover is the same as the default state to avoid visual changes
+        borderColor: "black", // This should match the default borderColor set in "& fieldset"
       },
       "&.Mui-focused fieldset": {
-        // Border color when the input is focused
-        borderColor: "black",
+        backgroundColor: "#F3F4F6",
+        borderColor: "black", // Customize this as needed for the focus state
+        boxShadow: "0 0 0 2px rgba(8,22,49,0.5)", // Optional: Adjust boxShadow for focus indicator
       },
+    },
+    // Additional customization for the hover state to prevent outline changes
+    "&:hover": {
+      // Prevent any outline or border changes on hover
+      outline: "none",
+      border: "0px", // Match this to the default state if necessary
     },
   });
 
   const CustomButton = styled(Button)({
     backgroundColor: "#FAD64B", // Example: Change to any color you want
     color: "#081631", // Text color
-    fontSize: "22px", // Change text size
+    fontSize: "23px", // Change text size
     fontWeight: "900",
-    borderRadius: "3px", // Adjust border radius
-    padding: "15px 48px", // Example: Change border color and width as needed
+    borderRadius: "5px", // Adjust border radius
+    padding: "14px 48px", // Example: Change border color and width as needed
     "&:hover": {
       backgroundColor: "#e3bc24", // Darker shade for hover state
       borderColor: "#005cbf", // Optionally change the border color on hover
@@ -72,32 +88,29 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <div className=" h-[550px] bg-blue-1000">
+      <div className=" h-[550px] bg-blue-1000 ">
         <div className="flex items-center ">
-          <div className="flex flex-col text-white-100 w-[53%] mt-24 ml-6 ">
+          <div className="flex flex-col text-white-100 w-[50%] mt-24 ml-4 relative left-5 bottom-10">
             <h4 className="font-semibold tracking-widest">
               WEB HOSTING, DOMAINS, WORDPRESS
             </h4>
             <h5 className="leading-[75px] font-source-serif font-extrabold text-[55px] ">
-              EarlyTech makes{" "}
-              <span className="bg-grey-600 px-1"> Managment </span>{" "}
-              <span className="px-3 ml-3 font-sans bg-blue-500">
-                convinient
-              </span>
+              EarlyTech makes Managment convinient
             </h5>
-            <div className="pt-4">
+            <div className="mt-4">
               <CustomButton variant="contained">Get Started</CustomButton>
             </div>
-            <p className="mt-2">
+            <p className="mt-4">
               Rated ★★★★★ on{" "}
               <span className="font-source-serif font-extrabold text-2xl ">
                 TrustPilot.com{" "}
               </span>
             </p>
           </div>
+          <img src={banner} alt="banner" className="h-[550px]" />
         </div>
       </div>
-      <div className="bg-blue-400 h-[750px] ">
+      <div className="bg-blue-400 h-[800px] ">
         <div className="flex justify-center  [&>*]:bg-white-200 [&>*]:h-[330px] [&>*]:w-[30%]  [&>*]:mx-5 [&>*]:mt-[-60px] [&>*]:rounded-lg [&>*]:flex [&>*]:flex-col">
           <div className="pt-4 pl-8">
             <ContentPasteSearchIcon
@@ -181,14 +194,18 @@ function App() {
             Get notified about our latest offers and news!
           </h5>
           <div className="flex ">
-            <CustomTextField id="filled-basic" variant="filled" />
+            <CustomTextField
+              id="filled-basic"
+              variant="filled"
+              sx={{ width: "100%" }}
+            />
             <CustomButtonTwo variant="contained">Join</CustomButtonTwo>
           </div>
         </div>
       </div>
       <Teams />
       <FormSubmit />
-      <FAQs/>
+      <FAQs />
       <Footer />
     </div>
   );
