@@ -8,6 +8,11 @@ module.exports = {
         sans: ["Montserrat", "Helvetica", "sans-serif"],
         "source-serif": ['"Source Serif Pro"', "Times", "serif"],
       },
+      screens: {
+        sm: "340px",
+        md: "768px",
+        lg: "1024px",
+      },
       colors: {
         orange: {
           0: "#FFF3E0",

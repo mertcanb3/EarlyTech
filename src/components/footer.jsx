@@ -35,18 +35,18 @@ function Footer() {
     "&:hover": {
       backgroundColor: "#e3bc24", // Darker shade for hover state
       borderColor: "#005cbf",
-      color: "#FAD64B" // Optionally change the border color on hover
+      color: "#FAD64B" 
     },
     transition: "all 0.7s",
-    textTransform: "none", // Prevents text from being all uppercase
+    textTransform: "none", 
     letterSpacing: "1px",
-    // Add other states (active, focus) if needed
+    
   });
 
   return (
-    <div className="flex flex-col h-[480px] bg-blue-1000 border-t-4 border-blue-300 ">
-      <div className="flex my-auto justify-around mx-8">
-        <div className="flex flex-col  items-center">
+    <div className="flex flex-col  md:h-[480px] bg-blue-1000 border-t-4 border-blue-300 ">
+      <div className="flex my-auto flex-wrap justify-around md:mx-8 sm:mx-0 sm:[&>*]:mx-12 mt-12 sm:[&>*]:mt-12">
+        <div className="flex flex-col   items-center">
           <img src={bannerlogo} alt="bannerLogo" className="h-24" />
           <Divider variant="middle" sx={dividerStyle} />
           <p className="text-xs tracking-widest font-semibold text-blue-200">
@@ -54,7 +54,7 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-col">
+          <div className="flex flex-col ">
             <h5 className="font-semibold  tracking-wider text-lg mb-3 text-gray-200">
               FOLLOW US:
             </h5>
@@ -89,7 +89,7 @@ function Footer() {
             <CustomButton variant="contained">TrustPilot.com</CustomButton>
           </div>
         </div>
-        <div className="flex flex-col w-2/12">
+        <div className="flex flex-col md:w-2/12 sm:w-7/12 md:mb-0 sm:mb-12">
           <h5 className="font-semibold  tracking-wider text-lg mb-3 text-gray-200">
             RESOURCES:
           </h5>

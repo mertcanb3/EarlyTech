@@ -62,9 +62,8 @@ function FormSubmit() {
       borderColor: "#005cbf", // Optionally change the border color on hover
     },
     transition: "all 0.7s",
-    textTransform: "none", // Prevents text from being all uppercase
+    textTransform: "none",
     letterSpacing: "1px",
-    // Add other states (active, focus) if needed
   });
   return (
     <div className="mx-auto flex flex-col items-center justify-center h-[1000px] bg-grey-200 relative bottom-20 ">
@@ -75,29 +74,31 @@ function FormSubmit() {
         <div className="w-9/12 text-gray-800 text-lg font-[400] flex flex-wrap">
           Schedule a call today and one of our experts will be happy to help you
           decide which professional service is ideal for your business and talk
-          to you about next steps. <p className="flex">Reach us through
-          <a
-            href={`https://wa.me/${whatsAppNumber}?text=${whatsAppMessage}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-300 hover:text-blue-700 mx-1 font-semibold underline flex items-center relative bottom-2"
-          >
-            WhatsApp
-            <img src={whatsapp} alt="WhatsApp Logo" className="ml-1 h-12" />
-          </a>
-          or
-          <a
-            href="mailto:gokhan@earlytech.com"
-            className="text-blue-300 hover:text-blue-700 mx-1 font-semibold underline flex items-center relative bottom-2"
-          >
-            E-mail
-            <img src={email} alt="Email Logo" className="ml-1 h-10" />
-          </a>
+          to you about next steps.{" "}
+          <p className="flex">
+            Reach us through
+            <a
+              href={`https://wa.me/${whatsAppNumber}?text=${whatsAppMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-800 hover:text-blue-300 mx-1 font-semibold underline flex items-center relative bottom-2"
+            >
+              WhatsApp
+              <img src={whatsapp} alt="WhatsApp Logo" className="ml-1 h-12" />
+            </a>
+            or
+            <a
+              href="mailto:gokhan@earlytech.com"
+              className="text-blue-800 hover:text-blue-300 mx-1 font-semibold underline flex items-center relative bottom-2"
+            >
+              E-mail
+              <img src={email} alt="Email Logo" className="ml-2 h-10" />
+            </a>
           </p>
         </div>
       </div>
-      <div className="flex flex-col w-9/12 mt-12">
-        <div className="flex justify-start mb-12 ">
+      <div className="flex flex-col w-9/12 mt-7  ">
+        <div className="flex justify-between mb-12 ">
           <div className="flex flex-col w-full ">
             <CustomLabel
               variant="subtitle1"
@@ -121,7 +122,7 @@ function FormSubmit() {
             <CustomTextField
               id="filled-basic-2"
               variant="filled"
-              sx={{ width: "95%" }}
+              sx={{ width: "100%" }}
             />
           </div>
         </div>
@@ -135,11 +136,11 @@ function FormSubmit() {
           <CustomTextField
             id="filled-basic-3"
             variant="filled"
-            sx={{ width: "98%" }}
+            sx={{ width: "100%" }}
           />
         </div>
-        <div className="flex mt-12">
-          <div className="flex flex-col w-auto mr-3">
+        <div className="flex mt-12 ">
+          <div className="flex flex-col w-auto mr-3 ">
             <CustomLabel
               variant="subtitle1"
               sx={{ position: "relative", left: "3px" }}
@@ -166,25 +167,25 @@ function FormSubmit() {
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               sx={{
-                width: "100%",
+                width: "102%",
                 position: "relative",
-                right: "20px",
+                right: "18px",
                 top: "36px",
               }}
             />
           </div>
         </div>
-        <div className="flex flex-col mt-12">
-          <p className="text-xs text-gray-700 ">
-            By submitting your information you provide written consent to
-            Bluehost and its family of brands contacting you.{" "}
-            <span className="font-bold text-black-900 underline ">
-              *See full details.
-            </span>
-          </p>
-          <div className="w-6/12 mt-6">
-            <CustomButton variant="contained">Submit</CustomButton>
-          </div>
+      </div>
+      <div className="flex flex-col mt-10 justify-start  w-9/12">
+        <p className="text-xs text-gray-700 ">
+          By submitting your information you provide written consent to Bluehost
+          and its family of brands contacting you.{" "}
+          <span className="font-bold text-black-900 underline ">
+            *See full details.
+          </span>
+        </p>
+        <div className="w-6/12 mt-6">
+          <CustomButton variant="contained">Submit</CustomButton>
         </div>
       </div>
     </div>
