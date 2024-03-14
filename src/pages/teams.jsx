@@ -11,6 +11,7 @@ import Member6 from "../assets/6.png";
 import Member7 from "../assets/7.png";
 import Member8 from "../assets/8.png";
 import Member9 from "../assets/9.png";
+import Member10 from "../assets/10.png";
 
 function Teams() {
   // Array of member objects
@@ -77,6 +78,13 @@ function Teams() {
       intro:
         "Country Manager AVK International (Danish Company), Founder of Startup Digest, Angel Investor for 6 startups, Mechanical Engineer, MIT.",
       imageSrc: Member9,
+    },
+    {
+      name: "CHARLOTTE",
+      position: "CXO",
+      intro:
+        "Benefiting the pool of 100+ people and Depending on your needs, we will add people to your growth journey.",
+      imageSrc: Member10,
     },
   ];
 
