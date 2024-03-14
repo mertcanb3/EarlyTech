@@ -11,6 +11,7 @@ import Member6 from "../assets/6.png";
 import Member7 from "../assets/7.png";
 import Member8 from "../assets/8.png";
 import Member9 from "../assets/9.png";
+import Member10 from "../assets/10.png";
 
 function Teams() {
   // Array of member objects
@@ -78,6 +79,12 @@ function Teams() {
         "Country Manager AVK International (Danish Company), Founder of Startup Digest, Angel Investor for 6 startups, Mechanical Engineer, MIT.",
       imageSrc: Member9,
     },
+    {
+      name: "CHARLOTTE",
+      position: "CXO",
+      intro: `CBenefiting the pool of 100+ people and Depending on your needs, we will add people to your growth journey.`,
+      imageSrc: Member10,
+    },
   ];
 
   return (
@@ -99,7 +106,7 @@ function Teams() {
             />
             <div
               key={member.name}
-              className="bg-gray-100 flex flex-col items-center md:[&>*]:w-[450px] md:[&>*]:h-[450px] sm:[&>*]:h-[500px] pt-3"
+              className="bg-gray-100 flex flex-col items-center md:[&>*]:w-[450px] md:[&>*]:h-[400px] sm:[&>*]:h-[500px] pt-3"
             >
               <div className="flex flex-col items-center h-[220px] relative ">
                 <p className="text-2xl font-semibold tracking-wider relative top-40">
@@ -111,7 +118,7 @@ function Teams() {
 
                 {/* Add a container for the intro text with scroll */}
                 <div
-                  className="relative top-40 mt-5 mx-12 h-[150px] overflow-y-scroll tracking-wider text-center pr-2"
+                  className="relative top-40 mt-5 mx-12 h-[100px] overflow-y-scroll tracking-wider text-center pr-2"
                   style={{
                     scrollbarWidth: "thin",
                     scrollbarColor: "#d1d5db transparent",
