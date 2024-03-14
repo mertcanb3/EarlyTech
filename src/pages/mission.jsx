@@ -101,6 +101,32 @@ function Mission() {
   const windowWidth = useWindowWidth();
   const isMobile = windowWidth < 768;
 
+  const StyledDialog = styled(Dialog)(({ theme }) => ({
+    "& .MuiPaper-root": {
+      // Targeting the inner Paper component of Dialog
+      backgroundColor: "#f0f0f0", // Light grey background
+      color: "#333", // Dark text for contrast
+      minWidth: isMobile ? "200px" : "500px", // Minimum width
+      borderRadius: "8px", // Rounded corners
+    },
+  }));
+
+  const StyledDialogTitle = styled(DialogTitle)(({ theme }) => ({
+    textAlign: "center",
+    backgroundColor: "#1A74FF", // Blue background for the title
+    color: "#fff", // White text
+  }));
+
+  const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
+    padding: "40px 40px 40px 40px",
+    backgroundColor: "#fff", // White background for the content
+  }));
+
+  const StyledDialogContentText = styled(DialogContentText)(({ theme }) => ({
+    color: "#666", // Grey text
+    paddingTop: "20px",
+  }));
+
   const sections = [
     {
       title: "Sales Enablement",
@@ -277,12 +303,17 @@ function Mission() {
           </div>
         </div> */}
       </div>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>{dialogTitle}</DialogTitle>
-        <DialogContent>
-          <DialogContentText>{dialogContent}</DialogContentText>
-        </DialogContent>
-      </Dialog>
+      <StyledDialog open={open} onClose={handleClose}>
+        <StyledDialogTitle>
+          <div className="flex justify-between font-extrabold tracking-wider">
+            <p>{dialogTitle}</p>
+            <button onClick={handleClose}>X</button>
+          </div>{" "}
+        </StyledDialogTitle>
+        <StyledDialogContent>
+          <StyledDialogContentText>{dialogContent}</StyledDialogContentText>
+        </StyledDialogContent>
+      </StyledDialog>
     </>
   );
 }

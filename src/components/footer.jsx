@@ -50,7 +50,7 @@ function Footer() {
             Coopyright | Policies | Contact
           </p>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col sm:items-center md:items-start">
           <div className="flex flex-col ">
             <h5 className="font-semibold  tracking-wider text-lg mb-3 text-gray-200">
               FOLLOW US:
