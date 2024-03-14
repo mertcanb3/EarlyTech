@@ -53,6 +53,7 @@ function Footer() {
     setIsDrawerOpen(false);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
