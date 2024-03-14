@@ -1,8 +1,6 @@
 import React from "react";
-import bannerlogo from "../assets/namebanner-removebg-preview.png";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
+import bannerlogo from "../assets/fullLogo.png";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailIcon from "@mui/icons-material/Mail";
@@ -15,14 +13,14 @@ function Footer() {
     my: 2,
     width: "95%",
     borderRadius: 2,
-    backgroundColor: "#0056E0",
+    backgroundColor: "#00B2E1",
     border: "2px solid black",
     borderColor: "divider",
   };
 
   const dividerStyleTwo = {
     my: 1,
-    backgroundColor: "#80B2FF",
+    backgroundColor: "#00B2E1",
   };
 
   const CustomButton = styled(Button)({
@@ -35,21 +33,20 @@ function Footer() {
     "&:hover": {
       backgroundColor: "#e3bc24", // Darker shade for hover state
       borderColor: "#005cbf",
-      color: "#FAD64B" 
+      color: "#FAD64B",
     },
     transition: "all 0.7s",
-    textTransform: "none", 
+    textTransform: "none",
     letterSpacing: "1px",
-    
   });
 
   return (
-    <div className="flex flex-col  md:h-[480px] bg-blue-1000 border-t-4 border-blue-300 ">
+    <div className="flex flex-col  md:h-[480px] bg-blue-1000 border-t-4 border-blue-0 ">
       <div className="flex my-auto flex-wrap justify-around md:mx-8 sm:mx-0 sm:[&>*]:mx-12 mt-12 sm:[&>*]:mt-12">
         <div className="flex flex-col   items-center">
-          <img src={bannerlogo} alt="bannerLogo" className="h-24" />
+          <img src={bannerlogo} alt="bannerLogo" className="h-32 relative top-4 left-4" />
           <Divider variant="middle" sx={dividerStyle} />
-          <p className="text-xs tracking-widest font-semibold text-blue-200">
+          <p className="text-xs tracking-widest font-semibold text-blue-0">
             Coopyright | Policies | Contact
           </p>
         </div>
@@ -58,19 +55,26 @@ function Footer() {
             <h5 className="font-semibold  tracking-wider text-lg mb-3 text-gray-200">
               FOLLOW US:
             </h5>
-            <div className="flex justify-between">
-              <XIcon sx={{ color: "#80B2FF", fontSize: "40px" }} />
-              <FacebookIcon sx={{ color: "#80B2FF", fontSize: "40px" }} />
-              <InstagramIcon sx={{ color: "#80B2FF", fontSize: "40px" }} />
+            <div className="flex md:ml-[-10px] sm:ml-0 md:mb-[-70px] sm:mb-0">
+              <LinkedInIcon
+                sx={{ color: "#00B2E1", fontSize: "120px" }}
+                className="relative bottom-[20px]"
+              />
             </div>
           </div>
           <div className="flex flex-col mt-12">
             <h5 className="font-semibold  tracking-wider text-lg mb-3 text-gray-200">
               LINKS:
             </h5>
-            <p className="font-semibold text-gray-400"><span className="text-blue-200">》</span>Mission</p>
-            <p className="font-semibold text-gray-400"><span className="text-blue-200">》</span>Team</p>
-            <p className="font-semibold text-gray-400"><span className="text-blue-200">》</span>FAQ</p>
+            <p className="font-semibold text-gray-400">
+              <span className="text-blue-200">》</span>Mission
+            </p>
+            <p className="font-semibold text-gray-400">
+              <span className="text-blue-200">》</span>Team
+            </p>
+            <p className="font-semibold text-gray-400">
+              <span className="text-blue-200">》</span>FAQ
+            </p>
           </div>
         </div>
         <div className="flex flex-col">
@@ -95,15 +99,19 @@ function Footer() {
           </h5>
           <div className="flex flex-col ">
             <div className="flex items-center mb-5">
-              <MailIcon sx={{ color: "#80B2FF", fontSize: "40px" }} />
-              <p className="font-semibold text-gray-400 ml-4">gokhan@earlytech.com</p>
+              <MailIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
+              <p className="font-semibold text-gray-400 ml-4">
+                gokhan@earlytech.com
+              </p>
             </div>
             <div className="flex items-center mb-5">
-              <LocalPhoneIcon sx={{ color: "#80B2FF", fontSize: "40px" }} />
-              <p className="font-semibold text-gray-400 ml-4">+44 (755) 248 70-07</p>
+              <LocalPhoneIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
+              <p className="font-semibold text-gray-400 ml-4">
+                +44 (755) 248 70-07
+              </p>
             </div>
             <div className="flex items-center">
-              <LocationOnIcon sx={{ color: "#80B2FF", fontSize: "40px" }} />
+              <LocationOnIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
               <p className="font-semibold text-gray-400 ml-4 ">
                 1 Mark Square EC2A 4EG London, United Kingdom
               </p>

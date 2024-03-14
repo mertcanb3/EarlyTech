@@ -4,19 +4,44 @@ import Divider from "@mui/material/Divider";
 function FAQs() {
   const faqs = [
     {
-      question: "How long does the consulting last?",
+      question: "What service do you provide?",
       answer:
-        "Sum dolor. Necessitatibus, aliquam commodi quis veritatis esse aperiam fuga dignissimos dolor accusantium molestiae repellendus. Consequatur esse, aperiam fuga laboriosam officia maiores magnam? Laborum veniam, id quam perferendis laudantium rerum quidem minima dignissimos dolore quis aliquam, pariatur perspiciatis neque. In nihil quos earum ipsum nobis impedit obcaecati quis rerum est perferendis. Rem vitae consectetur at fugiat voluptate?",
+        "We provide Cofounder As A Service (CoAAS) tailored for tech companies seeking Global Growth/Expansion. Our goal is to navigate companies through the challenging phase known as the 'Valley of Death', enabling them to secure a Global Footprint and proceed independently on their growth journey after we leave.",
     },
     {
-      question: "Can We Contact You 24/7?",
+      question: "How long does the CoAAS engagement last?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae consectetur repellendus accusantium sunt neque perferendis quaerat possimus cum ut tempore impedit nobis saepe rem, eaque aperiam totam at magni aspernatur fugiat ex nesciunt dolore architecto. Recusandae vel officiis laboriosam odit vero, adipisci minima quibusdam aliquam fugit magni ipsa. Fugit quam eius repudiandae placeat dolor quis harum alias ullam reiciendis dicta?",
+        "The engagement period typically ranges from 6 to 24 months, tailored to meet your specific needs and expectations. Engagements shorter than 6 months may not allow for optimal value creation, while extending beyond 24 months becomes unnecessary as we aim to deliver comprehensive support within that timeframe. Beyond 24 months, we transition to long-term allies and collaborators, committed to supporting your journey indefinitely.",
     },
     {
-      question: "Can I get consulting from anywhere?",
+      question: "Do you take any equity?",
       answer:
-        "Sum dolor. Necessitatibus, aliquam commodi quis veritatis esse aperiam fuga dignissimos dolor accusantium molestiae repellendus. Consequatur esse, aperiam fuga laboriosam officia maiores magnam? Laborum veniam, id quam perferendis laudantium rerum quidem minima dignissimos dolore quis aliquam, pariatur perspiciatis neque. In nihil quos earum ipsum nobis impedit obcaecati quis rerum est perferendis. Rem vitae consectetur at fugiat voluptate?",
+        "It depends on the situation. There are a couple of companies in which we have shares, and we'd love to work with you on an occasional basis and continue our collaboration after 24 months. We can discuss equity options after the initial 6 months have passed.",
+    },
+    {
+      question: "How can I trust that you will create value for us?",
+      answer:
+        "We encourage you to speak with over 20 companies we've worked hand in hand with, 100+ companies we have mentored on a regular basis, and 1000+ companies we provide services occasionally. You have the freedom to choose any of these companies and contact them at any time. Feel free to be a spy or agent and check our past work without even informing us.",
+    },
+    {
+      question: "What sets you apart from others in the market?",
+      answer:
+        "We're your fellow, friend, comrade, companion, and partner in crime, serving as your trusted guide in Sales, Marketing, and Investment for Global Growth. Together, we form transformers alongside founders to tackle the formidable challenges of globalisation on your global journey.",
+    },
+    {
+      question: "What is your unfair competitive advantage?",
+      answer:
+        "Our unfair competitive advantage lies in our speed. We pride ourselves on our ability to instantly respond and execute tasks within milliseconds. If you're unsatisfied with any aspect of our work, please don't hesitate to tell us.",
+    },
+    {
+      question: "Tell me about your success so far?",
+      answer:
+        "We have successfully expanded sales to 20+ different countries, from Spain to the UK, from the USA to Morocco, prepared marketing plans for over 50+ technology companies, and executed them to drive sales. Additionally, we have raised investment/received term sheets from investors in the UK, USA, Switzerland, Turkey, and more.",
+    },
+    {
+      question: "Tell me about your team?",
+      answer:
+        "Our team boasts over 100+ years of combined business and management experience, coupled with primarily engineering backgrounds. Proficient in Applied Artificial Intelligence (AI), Internet of Things (IoT), Edutech, and Cleantech, our team members are graduates from esteemed universities worldwide and have worked for renowned companies like INTEL, Accenture, Siemens, HP, and more. Each member is an entrepreneur with a diverse portfolio of failures and successes, but most importantly, they understand YOU and your needs better than anyone else.",
     },
   ];
 
@@ -31,7 +56,10 @@ function FAQs() {
   };
 
   return (
-    <div className="flex relative bottom-28 rounded-t-3xl bg-white-0">
+    <div
+      id="faq-section"
+      className="flex relative bottom-28 rounded-t-3xl bg-white-0"
+    >
       <div className="flex flex-col items-center md:ml-12 sm:ml-8 pt-24">
         <h5 className="text-5xl font-source-serif font-extrabold text-black-700 md:w-full sm:w-11/12 mb-12">
           Frequently Asked Questions
@@ -40,7 +68,9 @@ function FAQs() {
           <React.Fragment key={index}>
             <Divider variant="middle" sx={dividerStyle} />
             <div className="flex my-8 sm:flex-wrap md:flex-nowrap">
-              <h5 className="text-2xl md:w-5/12 sm:w-11/12 font-semibold">{faq.question}</h5>
+              <h5 className="text-2xl md:w-5/12 sm:w-11/12 font-semibold">
+                {faq.question}
+              </h5>
               <p className="md:w-9/12 md:mx-24 sm:w-10/12 text-black-600 tracking-wide md:mt-0 sm:mt-5">
                 {faq.answer}
               </p>
