@@ -44,7 +44,11 @@ function Footer() {
     <div className="flex flex-col  md:h-[480px] bg-blue-1000 border-t-4 border-blue-0 ">
       <div className="flex my-auto flex-wrap justify-around md:mx-8 sm:mx-0 sm:[&>*]:mx-12 mt-12 sm:[&>*]:mt-12">
         <div className="flex flex-col   items-center">
-          <img src={bannerlogo} alt="bannerLogo" className="h-32 relative top-4 left-4" />
+          <img
+            src={bannerlogo}
+            alt="bannerLogo"
+            className="h-32 relative top-4 left-4"
+          />
           <Divider variant="middle" sx={dividerStyle} />
           <p className="text-xs tracking-widest font-semibold text-blue-0">
             Coopyright | Policies | Contact
@@ -113,7 +117,7 @@ function Footer() {
             <div className="flex items-center">
               <LocationOnIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
               <p className="font-semibold text-gray-400 ml-4 ">
-                1 Mark Square EC2A 4EG London, United Kingdom
+                1 Spinney Close, Emmer Green, Reading, UK RG4 8TB
               </p>
             </div>
           </div>

@@ -17,10 +17,9 @@ function FormSubmit() {
     >
       <div className="flex flex-col  md:w-full sm:w-10/12 relative md:bottom-10 sm:bottom-32">
         <div className="relative bottom-10 ">
-          <h5 className="font-source-serif text-[3.75rem] font-extrabold md:pt-0 sm:pt-52">
+          <h5 className="font-source-serif md:text-[3.75rem] sm:text-[3rem] font-extrabold md:pt-0 sm:pt-52">
             Request a consultation.
           </h5>
-
           <p className=" w-9/12 text-gray-800 text-lg font-[400] flex flex-wrap">
             Schedule a call today and one of our experts will be happy to help
             you decide which professional service is ideal for your business and

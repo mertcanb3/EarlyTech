@@ -216,17 +216,17 @@ function Mission() {
         >
           <div className=" opacity-100 flex flex-col text-white-100 w-[50%] mt-24 ml-4 relative left-5 bottom-10">
             <h4 className="font-semibold tracking-widest">
-              CO-FOUNDER AS A SERVICE.
+              CO-FOUNDER AS A SERVICE
             </h4>
-            <h5 className="leading-[75px] font-source-serif font-extrabold text-[55px]">
-              EarlyTech makes Growth Convenient
+            <h5 className="leading-[75px] font-source-serif font-extrabold md:text-[55px] sm:text-[50px] ">
+            Early Technologies Make Growth Perfect
             </h5>
-            <div className="md:mt-4 sm:mt-8">
+            <div className="md:mt-4 sm:mt-0">
               <CustomButton
                 sx={
                   isMobile
                     ? {
-                        width: "360px",
+                        minWidth: "300px",
                         marginTop: "40px",
                         paddingBottom: "10px",
                         paddingTop: "10px",
@@ -253,7 +253,7 @@ function Mission() {
         </div>
       </div>
 
-      <div className="bg-blue-400 md:h-[550px] sm:h-[210vh] ">
+      <div className="bg-blue-400 md:min-h-[550px] sm:min-h-[240vh] ">
         <div className="flex flex-wrap justify-center md:pt-0 sm:pt-20  [&>*]:bg-white-200 lg:[&>*]:h-[460px] sm:[&>*]:h-[550px]  md:[&>*]:w-[30%] sm:[&>*]:w-[350px] md:[&>*]:mx-5 md:[&>*]:mr-0 md:[&>*]:mt-[-60px] sm:[&>*]:mt-[30px] [&>*]:rounded-lg [&>*]:flex [&>*]:flex-col">
           {sections.map((section, index) => (
             <div key={index} className="pt-4 pl-8">

@@ -34,14 +34,14 @@ function Teams() {
       position: "Technical Improvement",
       intro:
         "Assistant Professor in Mathematical Optimization and Machine Learning, PhD. from Univ. of Waterloo, MIT Postdoctoral Fellow. AI consultant for tech scaleups.",
-      imageSrc: Member3,
+      imageSrc: Member4,
     },
     {
       name: "BERC",
       position: "Strategy and Innovation",
       intro:
         "Ex-HP, Ex-GSK, Director @Maven Insights in Saudi Arabia. Industrial Engineer. M.Sc. in Engineering Management from Rochester. Diploma from Oxford University for Strategy and Innovation, Angel Investor, Mentor, DEIK Saudi-Turkiye Committee Member.",
-      imageSrc: Member4,
+      imageSrc: Member3,
     },
     {
       name: "JANE",
@@ -83,7 +83,7 @@ function Teams() {
   return (
     <div
       id="team-section"
-      className="rounded-3xl md:h-[290vh] sm:h-[810vh] sm:px-5 md:px-0 md:pb-24 sm:pb-24 relative bottom-10 z-30 flex flex-wrap justify-between items-center"
+      className="rounded-3xl md:h-[290vh] sm:min-h-[810vh] sm:px-5 md:px-0 md:pb-24 sm:pb-24 relative bottom-10 z-30 flex flex-wrap justify-between items-center"
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(${bg})`,

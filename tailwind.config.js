@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, 
   theme: {
     extend: {
       fontFamily: {
@@ -9,6 +9,7 @@ module.exports = {
         "source-serif": ['"Source Serif Pro"', "Times", "serif"],
       },
       screens: {
+        xs: "300px",
         sm: "340px",
         md: "768px",
         lg: "1024px",
