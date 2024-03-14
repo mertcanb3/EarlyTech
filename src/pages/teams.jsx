@@ -83,7 +83,7 @@ function Teams() {
   return (
     <div
       id="team-section"
-      className="rounded-3xl md:h-[290vh] sm:min-h-[810vh] sm:px-5 md:px-0 md:pb-24 sm:pb-24 relative bottom-10 z-30 flex flex-wrap justify-between items-center"
+      className="rounded-3xl md:min-h-[290vh] sm:min-h-[810vh] sm:px-5 md:px-0 md:pb-24 sm:pb-24 relative bottom-10 z-30 flex flex-wrap justify-between items-center"
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(${bg})`,
