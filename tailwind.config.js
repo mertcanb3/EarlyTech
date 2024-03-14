@@ -67,7 +67,7 @@ module.exports = {
           1000: "#C3C4C6",
         },
         blue: {
-          0: "#E6F0FF", // Lightest blue
+          0: "#00B2E1", // Lightest blue
           100: "#B3D1FF",
           200: "#80B2FF",
           300: "#4D93FF",
