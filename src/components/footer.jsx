@@ -88,23 +88,23 @@ function Footer() {
             <h5 className="font-semibold  tracking-wider text-lg mb-3 text-gray-200">
               SITEMAP:
             </h5>
-            <p className="font-semibold text-gray-400 ">
+            <p className="font-semibold text-gray-400 hover:text-gray-200 transition-all duration-1000">
               <a
                 href="#mission-section"
                 onClick={(e) => handleScroll(e, "mission-section")}
               >
-                <span className="text-blue-200">》</span>Mission
+                <span className="text-blue-200 ">》</span>Mission
               </a>
             </p>
-            <p className="font-semibold text-gray-400">
+            <p className="font-semibold text-gray-400 hover:text-gray-200 transition-all duration-1000">
               <a
                 href="#team-section"
                 onClick={(e) => handleScroll(e, "team-section")}
               >
-                <span className="text-blue-200">》</span>Team
+                <span className="text-blue-200 ">》</span>Team
               </a>
             </p>
-            <p className="font-semibold text-gray-400">
+            <p className="font-semibold text-gray-400 hover:text-gray-200 transition-all duration-1000">
               <a
                 href="#contact-section"
                 onClick={(e) => handleScroll(e, "contact-section")}
@@ -112,7 +112,7 @@ function Footer() {
                 <span className="text-blue-200">》</span>Contact Us
               </a>
             </p>
-            <p className="font-semibold text-gray-400">
+            <p className="font-semibold text-gray-400 hover:text-gray-200 transition-all duration-1000">
               <a
                 href="#faq-section"
                 onClick={(e) => handleScroll(e, "faq-section")}
@@ -143,24 +143,35 @@ function Footer() {
             RESOURCES:
           </h5>
           <div className="flex flex-col ">
-            <div className="flex items-center mb-5">
-              <MailIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
-              <p className="font-semibold text-gray-400 ml-4 ">
-                gokhan@earlytechnologies.co.uk
-              </p>
-            </div>
-            <div className="flex items-center mb-5">
-              <LocalPhoneIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
-              <p className="font-semibold text-gray-400 ml-4">
-                +44 (755) 248 70-07
-              </p>
-            </div>
-            <div className="flex items-center">
-              <LocationOnIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
-              <p className="font-semibold text-gray-400 ml-4 ">
-                1 Spinney Close, Emmer Green, Reading, UK RG4 8TB
-              </p>
-            </div>
+            <a href="mailto:gokhan@earlytechnology.co.uk">
+              <div className="flex items-center mb-5">
+                <MailIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
+
+                <p className="font-semibold text-gray-400 hover:text-gray-200 transition-all duration-1000 ml-4 ">
+                  gokhan@earlytechnologies.co.uk
+                </p>
+              </div>
+            </a>
+            <a href="tel:+447552487007">
+              <div className="flex items-center mb-5">
+                <LocalPhoneIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
+                <p className="font-semibold text-gray-400 ml-4 hover:text-gray-200 transition-all duration-1000">
+                  +44 (755) 248 70-07
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://maps.google.com/?q=1 Spinney Close, Emmer Green, Reading, UK RG4 8TB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center">
+                <LocationOnIcon sx={{ color: "#00B2E1", fontSize: "40px" }} />
+                <p className="font-semibold text-gray-400 hover:text-gray-200 transition-all duration-1000 ml-4 ">
+                  1 Spinney Close, Emmer Green, Reading, UK RG4 8TB
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </div>

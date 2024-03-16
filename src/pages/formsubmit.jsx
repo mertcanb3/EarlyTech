@@ -41,7 +41,7 @@ function FormSubmit() {
             <p className="text-3xl"> WhatsApp </p>
           </a>
           <a
-            href="mailto:gokhan@earlytech.com"
+            href="mailto:gokhan@earlytechnology.co.uk"
             className="text-blue-800 hover:text-blue-300 mx-1 font-semibold underline flex flex-col items-center relative bottom-2"
           >
             <img src={email} alt="Email Logo" className="ml-2 h-[370px]" />

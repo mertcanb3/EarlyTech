@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Divider from "@mui/material/Divider";
 
+const useWindowWidth = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowWidth;
+};
+
 function FAQs() {
+  const windowWidth = useWindowWidth();
+  const isMobile = windowWidth < 768;
+
   const faqs = [
     {
       question: "What service do you provide?",
@@ -47,9 +65,9 @@ function FAQs() {
 
   const dividerStyle = {
     my: 2,
-    width: "95%",
+    width: isMobile ? "100%" : "95%",
     borderRadius: 2,
-    mr: "100px",
+    mr: isMobile ? "50px" : "100px",
     border: "2px solid black",
     borderColor: "divider",
     backgroundColor: "background.paper",
