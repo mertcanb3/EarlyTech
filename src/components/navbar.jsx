@@ -43,16 +43,16 @@ function Navbar() {
 
   const drawerStyle = {
     width: "100%",
-    minHeight: "300px", // Changed to minHeight to allow expansion
+    minHeight: "300px", 
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-around", // Changed to space-around for even spacing
+    justifyContent: "space-around", 
     backgroundColor: "#002D86",
     color: "#FFFFFF",
     fontSize: "24px",
     fontWeight: "bold",
-    padding: "15px 0", // Added padding top and bottom
+    padding: "15px 0", 
   };
 
   const dividerStyle = {
